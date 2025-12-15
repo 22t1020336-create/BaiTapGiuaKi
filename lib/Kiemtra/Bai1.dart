@@ -37,7 +37,7 @@ class MyHome extends StatelessWidget {
         Text('Xin chào', style: TextStyle(color: Colors.red, fontSize: 40)),
         Icon(Icons.heart_broken, color: Colors.red, size: 150),
         Text(
-          "Mình là Khoa đến từ Nhà Huế",
+          "Tôi tên là Bùi Ngọc Uyên Phương",
           style: TextStyle(color: Colors.blueAccent, fontSize: 30),
         ),
       ],

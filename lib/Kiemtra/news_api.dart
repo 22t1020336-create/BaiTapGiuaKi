@@ -1,21 +1,22 @@
 import 'dart:convert';
-import 'package:thaydungbt/Kiemtra/article.dart';
 import 'package:http/http.dart' as http;
+import 'news_article.dart';
 
-class NewsAPI {
-  final String apiKey = "5d2425df40f44e55ac9b0429264c2ab8";
+class NewsApiService {
+  final String apiKey = "bc18f636ced641e4940bf5982dbce62b";
 
-  Future<List<Article>> fetchNews() async {
-    final url =
-        "https://newsapi.org/v2/top-headlines?country=us&apiKey=$apiKey";
+  Future<List<NewsArticle>> fetchTopHeadlines() async {
+    final url = Uri.parse(
+      "https://newsapi.org/v2/top-headlines?country=us&apiKey=$apiKey",
+    );
 
-    final response = await http.get(Uri.parse(url));
+    final response = await http.get(url);
 
     if (response.statusCode == 200) {
-      final data = jsonDecode(response.body);
-      List articles = data["articles"];
+      final data = json.decode(response.body);
+      final List articles = data["articles"];
 
-      return articles.map((e) => Article.fromJson(e)).toList();
+      return articles.map((e) => NewsArticle.fromJson(e)).toList();
     } else {
       throw Exception("Failed to load news");
     }
