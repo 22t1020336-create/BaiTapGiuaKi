@@ -10,6 +10,7 @@ import 'package:thaydungbt/Kiemtra/Bai7.dart';
 import 'package:thaydungbt/Kiemtra/Bai8.dart';
 import 'package:thaydungbt/Kiemtra/Bai9.dart';
 import 'package:flutter/material.dart';
+import 'package:thaydungbt/Kiemtra/my_login1.dart';
 import 'package:thaydungbt/Kiemtra/news_list.dart';
 
 class AppDrawer extends StatelessWidget {
@@ -41,7 +42,7 @@ class AppDrawer extends StatelessWidget {
           _menuItem(context, "Bài tập 10: Đăng nhập", FormLogin()),
           _menuItem(context, "Bài tập 11: API Shop", MyProduct()),
           _menuItem(context, "Bài tập 12: API News", NewsListScreen()),
-          _menuItem(context, "Bài tập 13: API NguoiDung", NewsListScreen()),
+          _menuItem(context, "Bài tập 13: API NguoiDung", MyLogin()),
         ],
       ),
     );
